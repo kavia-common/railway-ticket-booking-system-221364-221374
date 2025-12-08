@@ -33,7 +33,11 @@ app.add_middleware(
 
 @app.get("/", summary="Health Check", tags=["Health"])
 def health_check():
-    """Health check endpoint."""
+    """Health check endpoint.
+
+    Returns:
+        dict: Simple JSON indicating service health.
+    """
     return {"message": "Healthy"}
 
 
